@@ -44,17 +44,17 @@ def editPetInfo(petID, connection, listPets):
     indexID = petID - 1
     try:
         newName = input("Please enter the new name:\n")
-        print(listPets[indexID].petName + "is now" + newName)
+        print(listPets[indexID].petName + " is now " + newName)
         newAge = input("Press enter the new age:\n")
-        print("Age is now" + newAge)
+        print("Age is now " + newAge)
         if newAge in toQuit:
             endProgram()
         elif int(newAge) not in range(0, 101):
             print("Must be integer between 0 and 100.")
-            newAge = str(listOfPets[listIndex].petAge)
+            newAge = str(listPets[indexID].petAge)
             print("Age is still: " + newAge)
         elif newAge == "":
-            newAge = str(listOfPets[listIndex].petAge)
+            newAge = str(listPets[indexID].petAge)
             print("Age will be: " + newAge)
         else:
             print("Age is now " + newAge)
